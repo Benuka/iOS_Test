@@ -10,6 +10,7 @@
 		1FA72A6B2453F7DD00D22A10 /* ListViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA72A6A2453F7DD00D22A10 /* ListViewCell.swift */; };
 		1FA72A6D2453F83600D22A10 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA72A6C2453F83600D22A10 /* ListViewController.swift */; };
 		1FA72A6F2454134C00D22A10 /* HotelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA72A6E2454134C00D22A10 /* HotelData.swift */; };
+		1FA72A712454CBD800D22A10 /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA72A702454CBD800D22A10 /* Video.swift */; };
 		1FB09CB624533415008AC878 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB09CB524533415008AC878 /* AppDelegate.swift */; };
 		1FB09CB824533415008AC878 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB09CB724533415008AC878 /* SceneDelegate.swift */; };
 		1FB09CBA24533415008AC878 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB09CB924533415008AC878 /* ViewController.swift */; };
@@ -23,6 +24,7 @@
 		1FA72A6A2453F7DD00D22A10 /* ListViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewCell.swift; sourceTree = "<group>"; };
 		1FA72A6C2453F83600D22A10 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		1FA72A6E2454134C00D22A10 /* HotelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelData.swift; sourceTree = "<group>"; };
+		1FA72A702454CBD800D22A10 /* Video.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
 		1FB09CB224533415008AC878 /* Assignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Assignment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FB09CB524533415008AC878 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1FB09CB724533415008AC878 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 				1FA72A6A2453F7DD00D22A10 /* ListViewCell.swift */,
 				1FA72A6C2453F83600D22A10 /* ListViewController.swift */,
 				1FA72A6E2454134C00D22A10 /* HotelData.swift */,
+				1FA72A702454CBD800D22A10 /* Video.swift */,
 			);
 			path = Assignment;
 			sourceTree = "<group>";
@@ -220,6 +223,7 @@
 				1FB09CBA24533415008AC878 /* ViewController.swift in Sources */,
 				1FB09CB624533415008AC878 /* AppDelegate.swift in Sources */,
 				1FA72A6D2453F83600D22A10 /* ListViewController.swift in Sources */,
+				1FA72A712454CBD800D22A10 /* Video.swift in Sources */,
 				1FB09CB824533415008AC878 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -10,18 +10,18 @@ import UIKit
 
 class ListViewCell: UITableViewCell {
 
-    @IBOutlet weak var img: UIImageView!
+    @IBOutlet weak var imgView: UIImageView!
+    
     @IBOutlet weak var nameLbl: UILabel!
-    @IBOutlet weak var addresslbl: UILabel!
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    
+    @IBOutlet weak var addressLbl: UILabel!
+    
+    
+//    func setHotels(hotels: HotelData ){
+//        nameLbl.text = hotels.title
+//    }
+    
+    func setVideo(video: Video) {
+        nameLbl.text = video.title
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-
 }

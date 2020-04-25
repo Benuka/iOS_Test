@@ -9,14 +9,14 @@
 import Foundation
 
 struct HotelData: Decodable {
-    let id: Int
-    let title: String
-    let description: String
-    let address: String
-    let postcode: String
-    let phoneNumber: String
-    let latitude: String
-    let longitude: String
+    var id: Int
+    var title: String
+    var description: String
+    var address: String
+    var postcode: String
+    var phoneNumber: String
+    var latitude: String
+    var longitude: String
     
     
 }
