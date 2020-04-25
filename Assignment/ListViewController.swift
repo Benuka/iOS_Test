@@ -8,7 +8,8 @@
 
 import UIKit
 
-class ListViewController: UIViewController {
+class ListViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
+    
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -26,9 +27,9 @@ class ListViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         // Do any additional setup after loading the view.
-        downloadJSON {
+        /*downloadJSON {
             print("Successful")
-        }
+        }*/
     }
     
     func createArray() -> [Video] {
@@ -48,6 +49,7 @@ class ListViewController: UIViewController {
     
     func downloadJSON(completed: @escaping () -> ()){
         let urlstring = "https://dl.dropboxusercontent.com/s/6nt7fkdt7ck0lue/hotels";
+
             let url = URL(string:urlstring)!
             URLSession.shared.dataTask(with: url) { (data, response, error) in
                 
@@ -63,6 +65,7 @@ class ListViewController: UIViewController {
                         }
                     }catch{
                         print("Error: " + error.localizedDescription)
+
                     }
                 }
                 
@@ -89,3 +92,17 @@ extension ListViewController: UITableViewDelegate, UITableViewDataSource {
 
 
 }
+
+//extension ViewController: UITableViewDelegate,UITableViewDataSource{
+//
+//
+//    /*func tableView(_ tableView: UITableView, cellForRowAt IndexPath: IndexPath) -> UITableViewCell {
+//        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? ListViewCell
+//        var name = ["fefevf","feev","fefefe","fwevev"]
+//        cell?.nameLbl.text = name[indexPath.row]
+//        return cell!
+//    }*/
+//
+//
+//
+//}
