@@ -20,8 +20,9 @@ class ViewController: UIViewController {
 
     @available(iOS 13.0, *)
     @IBAction func loginFBTapped(_ sender: Any) {
-        fbLogin()
-        
+        //fbLogin()
+        let mp = self.storyboard?.instantiateViewController(identifier: "ListViewController") as? ListViewController
+        self.navigationController?.pushViewController(mp!, animated: true)
     }
     
     @available(iOS 13.0, *)

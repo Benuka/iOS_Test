@@ -16,8 +16,23 @@
 		1FB09CBD24533415008AC878 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FB09CBB24533415008AC878 /* Main.storyboard */; };
 		1FB09CBF24533418008AC878 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1FB09CBE24533418008AC878 /* Assets.xcassets */; };
 		1FB09CC224533418008AC878 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FB09CC024533418008AC878 /* LaunchScreen.storyboard */; };
-		678ABD707A92244C6636686A /* Pods_Assignment.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B64E553116FE0C3F7E020648 /* Pods_Assignment.framework */; };
+		35E1C34424550FF800709D41 /* Pods_Assignment.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B64E553116FE0C3F7E020648 /* Pods_Assignment.framework */; };
+		35E1C34524550FF800709D41 /* Pods_Assignment.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B64E553116FE0C3F7E020648 /* Pods_Assignment.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		35E1C34624550FF800709D41 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				35E1C34524550FF800709D41 /* Pods_Assignment.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		1FA72A6A2453F7DD00D22A10 /* ListViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewCell.swift; sourceTree = "<group>"; };
@@ -41,7 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				678ABD707A92244C6636686A /* Pods_Assignment.framework in Frameworks */,
+				35E1C34424550FF800709D41 /* Pods_Assignment.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,6 +127,7 @@
 				1FB09CAF24533415008AC878 /* Frameworks */,
 				1FB09CB024533415008AC878 /* Resources */,
 				8BBEFD910605C3062C0D8AE2 /* [CP] Embed Pods Frameworks */,
+				35E1C34624550FF800709D41 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -129,7 +145,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1140;
-				LastUpgradeCheck = 1140;
+				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = "Benuka Withanage";
 				TargetAttributes = {
 					1FB09CB124533415008AC878 = {
@@ -368,7 +384,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = R3K3VKS2JB;
 				INFOPLIST_FILE = Assignment/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -411,7 +427,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.benuka.online.Assignment;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -423,7 +439,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = R3K3VKS2JB;
 				INFOPLIST_FILE = Assignment/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -466,7 +482,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.benuka.online.Assignment;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

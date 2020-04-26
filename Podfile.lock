@@ -15,11 +15,17 @@ PODS:
     - FBSDKLoginKit/Login (= 5.15.1)
   - FBSDKLoginKit/Login (5.15.1):
     - FBSDKCoreKit (~> 5.0)
+  - SDWebImage (5.7.3):
+    - SDWebImage/Core (= 5.7.3)
+  - SDWebImage/Core (5.7.3)
+  - SDWebImageSwiftUI (1.3.3):
+    - SDWebImage (~> 5.7)
 
 DEPENDENCIES:
   - FacebookCore
   - FacebookLogin
   - FBSDKLoginKit
+  - SDWebImageSwiftUI
 
 SPEC REPOS:
   trunk:
@@ -27,13 +33,17 @@ SPEC REPOS:
     - FacebookLogin
     - FBSDKCoreKit
     - FBSDKLoginKit
+    - SDWebImage
+    - SDWebImageSwiftUI
 
 SPEC CHECKSUMS:
   FacebookCore: ba86524b66cfa86d0f8e65d08faa8504a9f732dd
   FacebookLogin: 6cee9fd6e1fe976fe8f7eec199e27b28b14f5d63
   FBSDKCoreKit: 1d5acf7c9d7a2f92bb1a242dc60cae5b7adb91df
   FBSDKLoginKit: f1ea8026a58b52d30c9f2e6a58ca7d813619fb83
+  SDWebImage: 97351f6582ceca541ea294ba66a1fcb342a331c2
+  SDWebImageSwiftUI: a34ad354527ec71f8dcb5c5e82179734285280a6
 
-PODFILE CHECKSUM: f5e302bacf7f36661194f9aec5e6c3a5bf05c7bf
+PODFILE CHECKSUM: 97c0c781b8d1c38993e48595c0287bd43fd5b630
 
 COCOAPODS: 1.9.1

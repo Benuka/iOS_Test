@@ -7,12 +7,15 @@
 //
 
 import UIKit
+import SDWebImage
 
+@available(iOS 13.0, *)
+@available(iOS 13.0, *)
 class ListViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
     
     
     var name = ["fefevf","feev","fefefe","fwevev"]
-    var hotels = [HotelData]()
+    var hotels : [HotelData] = []
     
     class FullResponse : Decodable{
         let data : [HotelData]
@@ -22,11 +25,14 @@ class ListViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "ListViewCell")
+        //tableView.register(ListViewCell.self, forCellReuseIdentifier: "ListViewCell")
+        tableView.delegate = self;
+        tableView.dataSource = self;
         // Do any additional setup after loading the view.
-        /*downloadJSON {
+        downloadJSON {
+            self.tableView.reloadData()
             print("Successful")
-        }*/
+        }
     }
     
     func downloadJSON(completed: @escaping () -> ()){
@@ -37,8 +43,9 @@ class ListViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
             if error == nil {
                 do{
                     let a = try JSONDecoder().decode(FullResponse.self, from: data!)
-                    self.hotels = a.data;
+                    self.hotels.append(contentsOf: a.data)
                     print(self.hotels.count)
+                    
                     
                     DispatchQueue.main.async {
                         completed()
@@ -52,14 +59,26 @@ class ListViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ListViewCell", for: indexPath)// as! ListViewCell;
-        cell.textLabel?.text = "ifhaam";
+        let hotel = self.hotels[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! ListViewCell;
+        cell.nameLbl?.text = hotel.title
+        cell.addresslbl?.text = hotel.address
+//        WebImage(url: URL(string:hotel.image.small))
+//            .onSuccess{image,cacheType in
+//                cell.img.image = image
+//            }
+//        .onFailure{ error in
+//            print(error)
+//        }
+        cell.imageView?.sd_setImage(with: URL(string:hotel.image.small), completed: { image, error, cachType, url in
+            cell.imageView?.image = image
+        })
         return cell
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         //var name = ["fefevf","feev","fefefe","fwevev"]
-        return 5
+        return self.hotels.count
     }
 
     func numberOfSections(in tableView: UITableView) -> Int {

@@ -17,6 +17,11 @@ struct HotelData: Decodable {
     let phoneNumber: String
     let latitude: String
     let longitude: String
-    
-    
+    let image:ImageLocation
+}
+
+struct ImageLocation:Decodable{
+    let small : String
+    let medium : String
+    let large : String
 }
